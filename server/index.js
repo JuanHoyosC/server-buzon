@@ -14,7 +14,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(cors({origin: 'http://localhost:4200'}));
 
 //routers
-app.use(require('./routes/index'));
+app.use(require('./routes/email.router'));
+app.use(require('./routes/usuario.router'));
 
 
 app.listen(app.get('port'), () => console.log(`listening on http://localhost:${app.get('port')}`));

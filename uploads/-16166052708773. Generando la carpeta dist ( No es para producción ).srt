@@ -1,0 +1,191 @@
+1
+00:00:03,720 --> 00:00:11,540
+Comencemos a crearnos un nuevo proyecto solo para hacer el Diplomat proces a una boda terminal y aquí
+
+2
+00:00:11,750 --> 00:00:16,000
+hagamos lo siguiente Vamos a navegar hacia la carpeta donde tenemos el proyecto.
+
+3
+00:00:16,090 --> 00:00:24,670
+Llegamos en GMU en Ginebra y el nombre de aplicación pongámosle despliegue.
+
+4
+00:00:25,060 --> 00:00:31,590
+Nada más entrar van a dejar que eso empiece a generar todo a descomprimir las cosas Déjenlo ahí y yo
+
+5
+00:00:31,590 --> 00:00:39,620
+voy a cortar el video ok en mi caso ya terminó me a la carpeta de despliegue y lo voy a poner 14.1 despliegue.
+
+6
+00:00:40,440 --> 00:00:48,330
+Navegamos hacia ese proyecto de este caso 14 enter podemos hacer un Engineer para poder ver la aplicación
+
+7
+00:00:48,330 --> 00:00:49,600
+que funciona.
+
+8
+00:00:49,620 --> 00:00:52,340
+La verdad no hemos hecho absolutamente nada.
+
+9
+00:00:52,920 --> 00:00:59,760
+Esperemos que esto termine de levantarse es que no hemos hecho nada simplemente quiero que sea una aplicación
+
+10
+00:00:59,760 --> 00:01:02,040
+por defecto y e insta a Orcs.
+
+11
+00:01:02,250 --> 00:01:04,350
+Listo.
+
+12
+00:01:04,530 --> 00:01:08,930
+Cómo hacemos un archivo o generamos la carpeta disto las carpetas.
+
+13
+00:01:09,090 --> 00:01:15,330
+Nos va a ayudar a nosotros a poder desplegarlo algún lugar pero con fines todavía de desarrollo por
+
+14
+00:01:15,330 --> 00:01:16,190
+decirlo así.
+
+15
+00:01:16,320 --> 00:01:18,360
+La idea es que le expliquemos la aplicación.
+
+16
+00:01:18,420 --> 00:01:24,210
+Pero si algo algo sucede que todavía nos dé una información de dónde falló algo es obtener más información
+
+17
+00:01:24,210 --> 00:01:25,300
+de depuración.
+
+18
+00:01:25,350 --> 00:01:31,440
+Para eso vamos a hacer lo siguiente Kenji de esta manera.
+
+19
+00:01:31,440 --> 00:01:34,600
+Aquí está el virus está que estamos aquí abajo.
+
+20
+00:01:36,380 --> 00:01:41,480
+Tienes que cancelar el servidor por ahí va a empezar a acompañarlo a generar todo.
+
+21
+00:01:41,990 --> 00:01:46,790
+Si miramos el proyecto aquí ya está creando esta carpeta.
+
+22
+00:01:47,000 --> 00:01:48,120
+De hecho ya lo hizo.
+
+23
+00:01:48,260 --> 00:01:56,780
+Este archivo de distribución con todos los componentes pipes librerías utilizadas todo compactado y
+
+24
+00:01:57,030 --> 00:02:01,520
+estos archivos inclusive el icono si tuviéramos aceptais todo viene acá.
+
+25
+00:02:01,790 --> 00:02:06,950
+Si ustedes se fijan en los archivos todavía tienen aquí su versión Mapp tiene el fondo que ya viene
+
+26
+00:02:06,950 --> 00:02:14,960
+todo compactado de los archivos exculpados JavaScript etc varias cosas son archivos relativamente pesados
+
+27
+00:02:15,080 --> 00:02:22,130
+esto ha empezado relativamente ligeros y otros pesados estos archivos ya le digo no están listos para
+
+28
+00:02:22,850 --> 00:02:28,100
+un ambiente de producción porque por lo general tenemos que ponerles un nombre diferente para prevenir
+
+29
+00:02:28,100 --> 00:02:33,260
+el caché del navegador web porque eso es uno de los principales problemas pero en este caso esta carpeta
+
+30
+00:02:33,260 --> 00:02:39,030
+de distribución de distribución yo la voy a copiar así como esta la voy a poner en mi escritorio yo
+
+31
+00:02:39,050 --> 00:02:40,790
+tengo aquí y voy a abrirlo esta terminal.
+
+32
+00:02:40,790 --> 00:02:48,130
+Yo tengo un plugin una nueva terminal yo tengo un plugin de Nott HTTP Server así se llama ustedes lo
+
+33
+00:02:48,130 --> 00:02:54,770
+pueden buscar acá tipi Server que me ayuda a montar rápidamente un servidor de chat rápidamente.
+
+34
+00:02:54,770 --> 00:02:59,930
+Es un servidor así como un Apache lo pueden instalar simplemente tienen que hacer esto y listo.
+
+35
+00:02:59,930 --> 00:03:06,020
+La idea es demostrarles a ustedes que con esa carpeta distes como está que está acá.
+
+36
+00:03:06,020 --> 00:03:08,560
+Yo puedo montar esta aplicación nuevamente.
+
+37
+00:03:08,750 --> 00:03:12,420
+Voy a moverme en la carpeta ADIS y ahora voy a hacer un HTTP Server.
+
+38
+00:03:12,470 --> 00:03:18,450
+Esto es del plugin nada que ver con ãngulo menos o para abrir de una vez el navegador web.
+
+39
+00:03:18,930 --> 00:03:26,120
+éste ya no va a funcionar ya no tengo corriendo el servidor y esta parte de acá ya es mi código de producto
+
+40
+00:03:26,420 --> 00:03:27,160
+de angula.
+
+41
+00:03:27,230 --> 00:03:34,190
+Pero repito esto es para fines de pruebas todavía puedo decir así casi casi en producción o pre-producción
+
+42
+00:03:34,280 --> 00:03:35,790
+le dicen así en otros lados.
+
+43
+00:03:35,930 --> 00:03:41,540
+Ya a continuación vamos a crearnos el archivo listo con todos los pasos como el true shaking que es
+
+44
+00:03:41,540 --> 00:03:46,730
+quitar toda la basura que ocupamos y hacer que la aplicación sólo tenga lo necesario para que trabaje
+
+45
+00:03:46,790 --> 00:03:47,690
+en producción.
+
+46
+00:03:47,750 --> 00:03:52,160
+En este caso ustedes podrían trabajar con la aplicación y tendrían todavía la documentación y la lista
+
+47
+00:03:52,160 --> 00:03:54,560
+de errores bien definidos en caso de que algo falla.
+
+48
+00:03:54,560 --> 00:03:58,400
+Esto todavía es bastante útil por eso no lo vieron así en este video.
