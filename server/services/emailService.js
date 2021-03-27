@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 //Crea el html que se enivara al correo
-const crearHtml = ({ descripcion, tipoAsunto, tipoTema, anonimato, contacto, telefono, correo }, _id, index) => {
+const crearHtml = ({ descripcion, tipoAsunto, tipoTema, anonimato, contacto, telefono, correo, nombreC }, _id, index) => {
     let html = `<div style="background: rgb(46, 71, 104); padding: 20px;">
     <p style="color: #fff; font-size: 18px;text-align:center;">Asunto: ${tipoAsunto}</p>
     <p style="color: #fff; font-size: 18px;text-align:center;">Tema: ${tipoTema}</p>
@@ -18,7 +18,8 @@ const crearHtml = ({ descripcion, tipoAsunto, tipoTema, anonimato, contacto, tel
 
         //Si no es anonimo se verifica si se trabajara con telefono o correo
     } else {
-        html += `<p style="color: #fff; font-size: 18px;text-align:center;">Contacto para resolucíon: ${ contacto }</p>`
+        html += `<p style="color: #fff; font-size: 18px;text-align:center;">Nombre de la persona: ${ nombreC }</p>
+        <p style="color: #fff; font-size: 18px;text-align:center;">Contacto para resolucíon: ${ contacto }</p>`
         if (contacto === 'Vía telefonica') {
             html += `<p style="color: #fff; font-size: 18px;text-align:center;">Telefono: ${telefono}</p>
                     ${small}</div>`;
@@ -35,12 +36,12 @@ const crearHtml = ({ descripcion, tipoAsunto, tipoTema, anonimato, contacto, tel
     return html;
 }
 
-
 const enviarCorreo = ( req, _id, index ) => {
     try {
         const { tipoAsunto, ubicacion } = req.body;
         //Obtiene el html creado apartir de los datos
         const html = crearHtml(req.body, _id, index);
+
         const transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
@@ -67,16 +68,13 @@ const enviarCorreo = ( req, _id, index ) => {
             if (error) {
                 console.log('error', error)
                 return ({ status: 'Hubo un error al enviar el correo' });
-                
-           
             }
-
-            console.log('enviado')
         })
 
     } catch (error) {
         
     }
 }
+
 
 module.exports = enviarCorreo

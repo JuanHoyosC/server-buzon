@@ -9,7 +9,6 @@ const verificar = require('../services/verificacion');
 const sendEmail = require('../services/emailService');
 
 
-
 const EmailController = {}
 
 EmailController.obtenerBuzon = async (req, res) => {
@@ -21,6 +20,7 @@ EmailController.obtenerBuzon = async (req, res) => {
     }
 }
 
+/*
 EmailController.descargaArchivos = async (req, res) => {
     try {
         const { ubicacion } = req.body;
@@ -29,6 +29,7 @@ EmailController.descargaArchivos = async (req, res) => {
         res.status(400).json({status: 'Hubo un error en la descarga'});
     }
 }
+*/
 
 EmailController.descargaArchivosZip = async (req, res) => {
     try {
@@ -46,7 +47,7 @@ EmailController.descargaArchivosZip = async (req, res) => {
 //Se encarga de actualizar el leido
 EmailController.marcarLeido = async (req, res) => {
     try {
-        const {id, leido} = req.body;
+       const {id, leido} = req.body;
        await Email.findByIdAndUpdate(id, { leido });
        res.status(200).json({status: 'Leido actualizado'});
     } catch (error) {

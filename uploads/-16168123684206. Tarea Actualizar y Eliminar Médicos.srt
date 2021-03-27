@@ -1,0 +1,571 @@
+1
+00:00:05,250 --> 00:00:09,930
+Es momento de que ustedes tengan otra tarea y tienen que hacer la eliminación y la actualización de
+
+2
+00:00:09,930 --> 00:00:10,590
+médicos.
+
+3
+00:00:10,860 --> 00:00:14,520
+Debemos saber que lo que necesito en la parte de los médicos tenemos solo uno.
+
+4
+00:00:14,670 --> 00:00:19,830
+Podemos jugar con este, vamos a actualizar lo primero y luego lo borramos y después podemos crear más
+
+5
+00:00:19,830 --> 00:00:20,190
+médicos.
+
+6
+00:00:20,430 --> 00:00:25,500
+No se preocupen, entonces lo que vamos a actualizar acá va a ser el nombre y también vamos a actualizar
+
+7
+00:00:25,590 --> 00:00:29,400
+el hospital del mismo, que vamos expresar el nombre y el hospital.
+
+8
+00:00:30,300 --> 00:00:34,290
+La imagen también la podríamos autorizar, pero la misma razón por la cual nosotros ya tenemos un servicio
+
+9
+00:00:34,290 --> 00:00:36,480
+para subir la imagen que por algún lado está.
+
+10
+00:00:36,900 --> 00:00:43,350
+Vamos a ver el archivo se a entonces no hace falta que nos enfoquemos en la imagen, sólo vamos a actualizar
+
+11
+00:00:43,350 --> 00:00:47,040
+lo que es el nombre y también el usuario que lo creó.
+
+12
+00:00:47,130 --> 00:00:50,130
+Esos son los dos campos que vamos a actualizar también hoy el hospital.
+
+13
+00:00:50,160 --> 00:00:55,890
+Estos tres usuario que sólo van a sacar del token el nombre, lo deberían de pedir como un argumento.
+
+14
+00:00:56,190 --> 00:00:59,010
+Y el hospital, que también lo vamos a recibir como un argumento.
+
+15
+00:00:59,950 --> 00:01:03,060
+Tiene que ser de un hospital que exista en la base de datos.
+
+16
+00:01:03,720 --> 00:01:05,150
+Pero por lo menos hagan eso.
+
+17
+00:01:05,160 --> 00:01:07,530
+La validación la vamos a implementar después de esto.
+
+18
+00:01:08,250 --> 00:01:11,790
+Entonces dejémoslo así y pónganse a crear todo.
+
+19
+00:01:11,820 --> 00:01:19,470
+Ustedes asegúrense de crear su ruta, de hacerla la creación o la actualización de médicos y la eliminación
+
+20
+00:01:19,470 --> 00:01:20,130
+de médicos.
+
+21
+00:01:20,350 --> 00:01:21,720
+Prueben con con el primero.
+
+22
+00:01:21,730 --> 00:01:25,960
+Yo voy a hacer doble clic en Crear médico derecho.
+
+23
+00:01:26,250 --> 00:01:27,060
+Duplicar.
+
+24
+00:01:27,550 --> 00:01:29,170
+Lo voy a darle en la parte inicial.
+
+25
+00:01:29,340 --> 00:01:30,390
+Vamos a nombrar esto.
+
+26
+00:01:30,450 --> 00:01:34,130
+Actualizar médico Enter Bodhi.
+
+27
+00:01:34,380 --> 00:01:37,010
+Voy a mandarle el nombre y un apellido, un hospital.
+
+28
+00:01:38,090 --> 00:01:38,840
+Eso está bien.
+
+29
+00:01:39,440 --> 00:01:41,200
+Los jefes tienen que mandar el toque toque.
+
+30
+00:01:41,350 --> 00:01:42,530
+Posiblemente ya expiró.
+
+31
+00:01:43,010 --> 00:01:48,530
+Tiene que ser una petición put@ para actualizarlo y tendríamos que ponerles las seguido de Heydi, del
+
+32
+00:01:48,530 --> 00:01:52,620
+médico que nosotros tenemos, que actualmente solo es uno y es Airy del médico.
+
+33
+00:01:53,230 --> 00:01:58,370
+Ustedes lo van a tener que mandar por acá, recibirlo y al tocasen debería de actualizar el médico.
+
+34
+00:01:58,380 --> 00:02:03,980
+Asegúrense de regresar el mismo médico en la petición de información actualizada y en la base de datos
+
+35
+00:02:04,270 --> 00:02:05,120
+de otro nombre.
+
+36
+00:02:05,360 --> 00:02:12,370
+Por ejemplo, en el body no acercaros Pineda va a ser Juan Carlos JuanCarlos y lo mandamos a este hospital.
+
+37
+00:02:12,400 --> 00:02:15,230
+Asegúrese que ese hospital exista y eso sería todo.
+
+38
+00:02:15,340 --> 00:02:18,740
+Y después de que se aseguren de que se actualice, hagan la eliminación.
+
+39
+00:02:18,800 --> 00:02:20,750
+Entonces manos a la obra, paso al video.
+
+40
+00:02:20,900 --> 00:02:25,700
+Yo regreso con ustedes, con la solución en unos instantes, pero por lo menos intenten hacer todo esto
+
+41
+00:02:25,880 --> 00:02:26,620
+pasa ahora.
+
+42
+00:02:30,540 --> 00:02:30,950
+O qué?
+
+43
+00:02:31,090 --> 00:02:33,730
+Espero que lo hayan logrado, que lo hayan intentado.
+
+44
+00:02:33,790 --> 00:02:34,910
+Eso sería genial.
+
+45
+00:02:35,060 --> 00:02:37,990
+Entonces comencemos en la parte de la ruta.
+
+46
+00:02:38,380 --> 00:02:42,130
+Siempre pueden empezar con las rutas en la parte de los médicos.
+
+47
+00:02:42,130 --> 00:02:43,200
+Aquí están reclutando médicos.
+
+48
+00:02:43,270 --> 00:02:44,470
+Empecemos con el de actualizar.
+
+49
+00:02:44,800 --> 00:02:47,890
+Nosotros tendremos que implementar básicamente esas mismas validaciones.
+
+50
+00:02:48,050 --> 00:02:49,640
+Tenemos que validar el toque.
+
+51
+00:02:49,820 --> 00:02:51,340
+Tendremos que variar el nombre y el hospital.
+
+52
+00:02:51,430 --> 00:02:53,250
+Y todos estos 4000 del hueso.
+
+53
+00:02:53,320 --> 00:02:54,080
+Voy a pegar acá.
+
+54
+00:02:54,660 --> 00:02:55,900
+OK, perfecto, ya está.
+
+55
+00:02:56,280 --> 00:02:58,900
+Tiene que ser un aire de mongo perfecto.
+
+56
+00:02:59,140 --> 00:02:59,660
+Los cambios?
+
+57
+00:02:59,670 --> 00:03:02,360
+Voy a actualizar médico lo que puedo hacer.
+
+58
+00:03:04,030 --> 00:03:04,990
+Actualizar médico.
+
+59
+00:03:05,010 --> 00:03:05,970
+Puedo abrir archivo.
+
+60
+00:03:06,000 --> 00:03:07,550
+Creo que me sale más rápido llegar acá.
+
+61
+00:03:07,660 --> 00:03:08,260
+Perfecto.
+
+62
+00:03:08,890 --> 00:03:12,700
+Y si quieren, si quieren, podemos abrir la parte de los hospitales.
+
+63
+00:03:12,790 --> 00:03:15,640
+La parte de la actualización de un hospital.
+
+64
+00:03:17,610 --> 00:03:24,430
+Y la voy a copiar y pegar allá en la parte de los médicos, en el médico controller, actualizar médico,
+
+65
+00:03:24,430 --> 00:03:30,820
+voy a reemplazar esto, borro, pego y voy a reemplazar todo esto tiene que ser antes de que se me olvide
+
+66
+00:03:31,290 --> 00:03:32,550
+y revisemos, se precisa el médico.
+
+67
+00:03:32,590 --> 00:03:35,140
+Tengo el plan Saidi y el VI que viene del token.
+
+68
+00:03:35,620 --> 00:03:37,120
+Aquí va a ser médico.
+
+69
+00:03:38,230 --> 00:03:42,220
+El médico de mi mayuscula maravedí lo tenemos y no existe el médico.
+
+70
+00:03:43,090 --> 00:03:47,060
+Voy a reemplazar esto que diga médico no encontrado por ahí, perfecto.
+
+71
+00:03:47,510 --> 00:03:49,460
+Ahora pongamos los cambios en el médico.
+
+72
+00:03:49,820 --> 00:03:51,350
+Estos son los cambios que quiero actualizar.
+
+73
+00:03:51,470 --> 00:03:52,610
+Recibo la ruco, despuntó.
+
+74
+00:03:52,660 --> 00:03:55,430
+Boddhai El usuario está igual.
+
+75
+00:03:55,520 --> 00:04:00,500
+Aquí va a ser hospital médico, actualizado, médico.
+
+76
+00:04:00,790 --> 00:04:01,310
+Fin.
+
+77
+00:04:01,390 --> 00:04:03,260
+Vaya, iría o opte y mandamos el Heydi.
+
+78
+00:04:03,290 --> 00:04:04,340
+Cambios en el hospital?
+
+79
+00:04:04,580 --> 00:04:10,370
+No sería cambios en el médico que regrese la nueva información y aquí va a ser médico.
+
+80
+00:04:11,390 --> 00:04:13,040
+Médico actualizado.
+
+81
+00:04:14,280 --> 00:04:15,230
+Y sería un error.
+
+82
+00:04:15,320 --> 00:04:17,000
+Hablé con el administrador y eso es todo.
+
+83
+00:04:17,030 --> 00:04:18,710
+Creo que eso sería voy a grabar los cambios.
+
+84
+00:04:18,740 --> 00:04:22,080
+Vamos a probar si esto cierto que manando Juan Carlos tocasen.
+
+85
+00:04:22,580 --> 00:04:23,810
+Vamos a ver si no hay ningún error.
+
+86
+00:04:23,950 --> 00:04:24,710
+Toquinho válido?
+
+87
+00:04:24,730 --> 00:04:25,000
+OK.
+
+88
+00:04:25,730 --> 00:04:30,260
+Siempre voy a dejar mejor este Lovin aquí abierto, abierto, aquí abierto.
+
+89
+00:04:30,260 --> 00:04:37,040
+Los copio, voy a actualizar, actualizar médico en el Geddes mandamos el nuevo token CEN y tengo la
+
+90
+00:04:37,040 --> 00:04:37,430
+información.
+
+91
+00:04:37,430 --> 00:04:43,490
+Es con Carlos, revisemos la base de datos de cargo y aquí dice Juan Carlos Exelente, ahora hagamos
+
+92
+00:04:43,490 --> 00:04:44,150
+la eliminación.
+
+93
+00:04:44,230 --> 00:04:48,500
+La eliminación es mucho más sencilla, pero igual manera hoy es copiar todo esto.
+
+94
+00:04:50,300 --> 00:04:51,260
+Transformar esto en Facebook.
+
+95
+00:04:52,760 --> 00:04:53,510
+Estoy aquí adentro.
+
+96
+00:04:55,330 --> 00:04:57,700
+Pegó y eliminamos los que no ocupamos.
+
+97
+00:04:58,280 --> 00:04:59,850
+No voy a ocupar el Hibari.
+
+98
+00:05:00,760 --> 00:05:05,320
+También podríamos tener una idea del usuario para verificar si es un administrador u otras cosas, y
+
+99
+00:05:05,320 --> 00:05:06,730
+ya lo vamos a hacer más adelante.
+
+100
+00:05:06,790 --> 00:05:09,700
+No se preocupen que tenemos el médico.
+
+101
+00:05:09,760 --> 00:05:12,150
+Esto está igual si no existen lo encontrado por ahí.
+
+102
+00:05:12,280 --> 00:05:18,250
+No ocupamos nada de esto y lo que tenemos que hacer aquí son waited del médico con mayúscula, apuntó
+
+103
+00:05:18,250 --> 00:05:18,560
+Fahim.
+
+104
+00:05:18,570 --> 00:05:27,010
+Bayardi, Dili, Parentesis, punto y coma y un MSG que diga médico borrado médico.
+
+105
+00:05:28,070 --> 00:05:31,490
+Borrado o eliminado, o como ustedes quieran ponerle trabas, los cambios.
+
+106
+00:05:31,550 --> 00:05:32,330
+Esto sería todo.
+
+107
+00:05:32,390 --> 00:05:33,710
+Vamos a ver si esto funciona.
+
+108
+00:05:34,550 --> 00:05:36,590
+Hagan clic derecho en actualizar médico.
+
+109
+00:05:36,620 --> 00:05:38,330
+Dupliquen esto, hacer una petición.
+
+110
+00:05:38,440 --> 00:05:41,610
+Lilit Todo lo demás parte debería ser igual.
+
+111
+00:05:42,850 --> 00:05:44,480
+Copiar el Heydi del médico.
+
+112
+00:05:46,190 --> 00:05:50,160
+Este es el día del médico, la petición de ustedes tiene que ir el token.
+
+113
+00:05:50,680 --> 00:05:57,390
+No ocupamos nada en el body grabar los cambios, aunque digan que vale la pena borrarlo o siempre borrarlo
+
+114
+00:05:57,410 --> 00:06:00,620
+porque recuerden que se hace en la documentación de pagos, entonces se puede ir ahí.
+
+115
+00:06:02,060 --> 00:06:05,420
+Hay argumentos que pueden cambiar la eliminación, aunque en teoría sí se puede.
+
+116
+00:06:05,460 --> 00:06:10,720
+Sería muy parecido a un putt, pero en nuestro caso sólo hay que mandar la petición a ese werden.
+
+117
+00:06:12,020 --> 00:06:14,630
+Dice que no puede encontrar la ruta.
+
+118
+00:06:15,230 --> 00:06:16,220
+No puede encontrar la ruta.
+
+119
+00:06:16,250 --> 00:06:18,830
+Entonces significa asegurarnos de grabar los cambios.
+
+120
+00:06:19,850 --> 00:06:22,560
+Revisamos la ruta de eliminación tiene y.
+
+121
+00:06:22,820 --> 00:06:24,560
+Creo que era que no había grabado los cambios.
+
+122
+00:06:24,670 --> 00:06:28,160
+Vamos a ver, igual nuevamente tenemos que lo escribí mal.
+
+123
+00:06:28,190 --> 00:06:29,400
+Perdón, médicos.
+
+124
+00:06:29,990 --> 00:06:30,920
+Y viene el aire.
+
+125
+00:06:31,880 --> 00:06:32,930
+Ahora soy médico borrado.
+
+126
+00:06:32,990 --> 00:06:33,950
+Revisemos la base de datos.
+
+127
+00:06:33,950 --> 00:06:34,490
+Recargó.
+
+128
+00:06:36,590 --> 00:06:39,320
+Vamos a ver y este es el Heydi.
+
+129
+00:06:39,670 --> 00:06:44,050
+Vamos a ver, este es el Heydi que termina A-92 pareciera que no lo hizo.
+
+130
+00:06:44,110 --> 00:06:47,170
+Voy a tocasen nuevamente y se me dijo borrado, pero no lo está borrando.
+
+131
+00:06:47,770 --> 00:06:53,230
+Revisemos nuestros médicos, nuestro controlador médico Bayardi Bandit y se olvidó de mandar el Leydi.
+
+132
+00:06:54,220 --> 00:06:55,600
+Eso era ok.
+
+133
+00:06:55,690 --> 00:06:57,200
+Voy a grabar los cambios que pudo.
+
+134
+00:06:57,220 --> 00:06:58,860
+Puede ser que haya disparado el catch?
+
+135
+00:06:58,980 --> 00:07:03,290
+No, no, no es por el catch porque no cayó acá, pero podríamos verificar si esto regresa.
+
+136
+00:07:03,310 --> 00:07:07,090
+Un triunfo si, y así saber si lo borro o no. Nuevamente médico borrado.
+
+137
+00:07:07,100 --> 00:07:10,440
+Regresamos al compás y ya no tenemos la data.
+
+138
+00:07:10,840 --> 00:07:13,480
+Espero que ustedes hayan logrado hacer esto mismo por su cuenta.
+
+139
+00:07:13,650 --> 00:07:15,160
+También noten que se hacen médicos.
+
+140
+00:07:15,170 --> 00:07:16,240
+Ya no existe ninguno.
+
+141
+00:07:16,300 --> 00:07:16,900
+Eso está bien.
+
+142
+00:07:17,830 --> 00:07:19,840
+Los cambios se van y eso era todo por acá.
+
+143
+00:07:19,960 --> 00:07:21,250
+Los veo en el siguiente video.

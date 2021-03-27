@@ -45,8 +45,9 @@ router.post('/email', emailController.guardarEmail);
 //Se encarga de enviar al front todas los mensajes enviados al buzon
 router.get('/emails',rutasProtegidas, emailController.obtenerBuzon );
 
-//Se encarga de enviar al front los archivos que seran descargados
+/* 
 router.post('/descarga', rutasProtegidas, emailController.descargaArchivos);
+*/
 
 //Se encarga de enviar al front los archivos en un zip
 router.post('/descargaZip', rutasProtegidas, emailController.descargaArchivosZip);
